@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Product</title>
+	<style type="text/css">
+		.nav{
+			margin-top: 5%;
+			margin-left: 25%;
+			width: 700px;
+			height:160px;
+			background-color: red;
+			opacity: 1.1;
+		}
+		.nav button{
+			margin-top: 10px;
+			margin-left: 43%;
+			padding-top: .7%;
+			padding-bottom: .7%;
+
+	
+		}
+		.nav button[type="submit"]{
+			margin-top: 10px;
+			margin-left: 43%;
+			padding-top: .7%;
+			padding-bottom: .7%;
+
+	
+		}
+		#nav button[type="submit"]:hover{
+			background:green;
+			color:blue;
+		}
+
+		
+	</style>
+	
+</head>
+<body>
+	
+	<p align="right"><a href="{{ url_for('gdisconnect') }}">
+		<button type="submit" value="Edit">Logout</button>
+		
+	</a></p>
+	<div class="nav">
+	<h1 align="center">Are you sure you want to delete {{ product.name }}</h1>
+	<form action="{{ url_for('deleteProduct', product_id = product.id) }}" method="POST">
+		<button type="submit" value="Delete">Delete</button>
+		<button><a href="{{ url_for('showProducts') }}">Cancel</a></button>
+	</form>
+</body>
+</html>

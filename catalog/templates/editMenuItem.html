@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Menu Item</title>
+	<style type="text/css">
+
+		.nav{
+			margin-top: 0%;
+			margin-left: 30%;
+			width: 500px;
+			height:490px;
+			background-color: yellow;
+			opacity: 1.1;
+		}
+		.nav input,p{
+			margin-left: 20%;
+			padding-right: 15%;
+			padding-top: .7%;
+			padding-bottom: .7%;
+			font-size: 14px;
+	
+		}
+		.nav button{
+			margin-top: 10px;
+			margin-left: 40%;
+			padding-top: .7%;
+			padding-bottom: .7%;
+	
+		}
+		#nav button[typr="submit"]:hover{
+			background:green;
+			color:blue;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<p align="right"><a href="{{ url_for('gdisconnect') }}">
+		<button type="submit" value="Edit">Logout</button></a>
+	<div class="nav">
+	<h1 align="center">Edit Item {{item.name }}</h1>
+	<form action="{{ url_for('editMenuItem', product_id = product.id, menu_id = menu_id) }}" method="POST">
+		<p>Name:</p>
+		<input type ='text' size='30' name='name' placeholder = '{{item.name }}' required="required">
+		<p>Description:</p>
+		<input type ='text' size='30' name='description' placeholder = '{{item.description }}' required="required">
+		<p>Price:</p>
+		<input type ='text' size='30' name='price' placeholder = '{{item.price }}' required="required">
+		<p>Course:</p>
+		<input type ='text' size='30' name='course' placeholder = '{{item.description }}' required="required">
+		<button type="submit" value="Edit">Edit</button>
+		<button><a href="{{ url_for('showMenu', product_id = product.id) }}">Cancel</a></button>
+	</form>
+</body>
+</html>

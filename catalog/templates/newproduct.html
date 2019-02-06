@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Category</title>
+	<style type="text/css">
+		.nav{
+			margin-top: 5%;
+			margin-left: 30%;
+			width: 500px;
+			height:200px;
+			background-color: pink;
+			opacity: 1.0 ;
+		}
+		.nav input,p{
+			margin-left: 20%;
+			padding-right: 15%;
+			padding-top: .7%;
+			padding-bottom: .7%;
+			font-size: 13px;
+	
+		}
+		.nav button{
+			margin-left: 40%;
+			padding-top: .7%;
+			padding-bottom: .7%;
+			margin-top: 10px;
+	
+		}
+		#nav button[typr="submit"]:hover{
+			background:green;
+			color:blue;
+		}
+
+		
+	</style>
+	
+	<link rel="stylesheet" type="text/css" src="/static/styles.css">
+	
+</head>
+<body>
+	<div class="nav">
+	<h1 align="Center">New Category</h1>
+	<form action="{{ url_for('newProduct') }}" method="POST">
+		<p>NAME:</p>
+		<input type="text" name="name" size="30" placeholder="Enter Category Type " required="required">
+		<button type="submit" name="Edit">Create</button>
+		<button><a href="{{ url_for('showProducts') }}">Cancel</a></button>
+	</form>
+</body>
+</html>

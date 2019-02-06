@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Menu Item</title>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+</head>
+<body>
+	<h1>Are you sure you want to delete {{ "'"+item.name+"'" }} from
+		{{ "'"+product.name+"'" }}??</h1>
+		<a href="{{ url_for('gdisconnect') }}">Logout</a><br><br>
+	<form action="{{ url_for('deleteMenuItem', product_id = product.id, menu_id = menu_id) }}" method="POST">
+		<input type="submit" value="Delete">
+		<a href="{{ url_for('showMenu', product_id = product.id) }}">Cancel</a>
+	</form>
+</body>
+</html>

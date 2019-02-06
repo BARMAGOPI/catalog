@@ -1,0 +1,27 @@
+.nav{
+			margin-top: 5%;
+			margin-left: 40%;
+			width: 500px;
+			height:450px;
+			background-color: yellow;
+			opacity: 1.1;
+		}
+		.nav input,p{
+			margin-left: 20%;
+			padding-right: 15%;
+			padding-top: .7%;
+			padding-bottom: .7%;
+			font-size: 14px;
+	
+		}
+		.nav button{
+			margin-top: 10px;
+			margin-left: 40%;
+			padding-top: .7%;
+			padding-bottom: .7%;
+	
+		}
+		#nav button[typr="submit"]:hover{
+			background:green;
+			color:blue;
+		}
